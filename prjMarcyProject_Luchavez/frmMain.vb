@@ -5,12 +5,13 @@ Public Class frmMain
     Private decItem1, decItem2, decTotal, decSavings As Decimal
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Application.CurrentCulture = New Globalization.CultureInfo("en-US")
         '
         'Initialize SkinManager
         '
         Dim skinManager As MaterialSkinManager = MaterialSkinManager.Instance
         skinManager.AddFormToManage(Me)
-        skinManager.Theme = MaterialSkinManager.Themes.LIGHT
+        skinManager.Theme = MaterialSkinManager.Themes.DARK
         skinManager.ColorScheme = New ColorScheme(Primary.Blue900, Primary.Blue700, Primary.LightBlue900, Accent.LightBlue200, TextShade.WHITE)
         'Format Inputs and Outputs
         FormatInputs()
@@ -19,12 +20,18 @@ Public Class frmMain
 
     Private Sub validate_Keys(sender As Object, e As KeyPressEventArgs) Handles txtItem1.KeyPress, txtItem2.KeyPress
         Dim t As TextBox = sender
-        If Not (Char.IsDigit(e.KeyChar)) AndAlso e.KeyChar <> ControlChars.Back AndAlso e.KeyChar <> "." Then
-            'to be rejected
-            e.Handled = True
+        'Check first if Enter button
+        If e.KeyChar = ChrW(Keys.Enter) And t.TextLength <> 0 Then
+            btnCalculate.PerformClick()
         Else
-            'to be accepted
-            e.Handled = If(e.KeyChar = "." AndAlso t.Text.Contains("."), True, False)
+            'Then check for other stuff
+            If Not (Char.IsDigit(e.KeyChar)) AndAlso e.KeyChar <> ControlChars.Back AndAlso e.KeyChar <> "." Then
+                'to be rejected
+                e.Handled = True
+            Else
+                'to be accepted
+                e.Handled = If(e.KeyChar = "." AndAlso t.Text.Contains("."), True, False)
+            End If
         End If
     End Sub
 
@@ -46,7 +53,7 @@ Public Class frmMain
         decSavings = If(decItem1 < decItem2, decItem1 * 0.5, decItem2 * 0.5)
         decTotal -= decSavings
         'display
-        MsgBox("Customer saved: " & decSavings.ToString("N2"))
+        MsgBox("Customer saved: " & decSavings.ToString("C2"))
         FormatOutputs()
     End Sub
 
@@ -55,21 +62,33 @@ Public Class frmMain
         FormatInputs()
     End Sub
 
-    Private Sub MaterialContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs)
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
 
+    Private Sub reject_Keypress(sender As Object, e As KeyPressEventArgs) Handles txtTotal.KeyPress
+        e.Handled = True
     End Sub
 
     Private Sub GetInputs()
-        Decimal.TryParse(txtItem1.Text, decItem1)
-        Decimal.TryParse(txtItem2.Text, decItem2)
+        decItem1 = ProcessInput(txtItem1.Text)
+        decItem2 = ProcessInput(txtItem2.Text)
     End Sub
 
+    Private Function ProcessInput(s As String) As Decimal
+        Try
+            ProcessInput = Double.Parse(s, Globalization.NumberStyles.Currency)
+        Catch ex As Exception
+            ProcessInput = 0
+        End Try
+    End Function
+
     Private Sub FormatInputs()
-        txtItem1.Text = decItem1.ToString("N2")
-        txtItem2.Text = decItem2.ToString("N2")
+        txtItem1.Text = decItem1.ToString("C2")
+        txtItem2.Text = decItem2.ToString("C2")
     End Sub
 
     Private Sub FormatOutputs()
-        txtTotal.Text = decTotal.ToString("N2")
+        txtTotal.Text = decTotal.ToString("C2")
     End Sub
 End Class

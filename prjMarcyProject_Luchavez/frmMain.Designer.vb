@@ -31,7 +31,7 @@ Partial Class frmMain
         Me.txtItem1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txtItem2 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.txtTotal = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.btnExit = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.btnExit = New MaterialSkin.Controls.MaterialFlatButton()
         Me.SuspendLayout()
         '
         'lblItem1
@@ -75,12 +75,15 @@ Partial Class frmMain
         '
         'btnCalculate
         '
+        Me.btnCalculate.AutoSize = True
+        Me.btnCalculate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnCalculate.Depth = 0
-        Me.btnCalculate.Location = New System.Drawing.Point(122, 231)
+        Me.btnCalculate.Icon = Nothing
+        Me.btnCalculate.Location = New System.Drawing.Point(214, 231)
         Me.btnCalculate.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnCalculate.Name = "btnCalculate"
         Me.btnCalculate.Primary = True
-        Me.btnCalculate.Size = New System.Drawing.Size(120, 23)
+        Me.btnCalculate.Size = New System.Drawing.Size(97, 36)
         Me.btnCalculate.TabIndex = 2
         Me.btnCalculate.Text = "Calculate"
         Me.btnCalculate.UseVisualStyleBackColor = True
@@ -91,7 +94,7 @@ Partial Class frmMain
         Me.lblTotal.Depth = 0
         Me.lblTotal.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.lblTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblTotal.Location = New System.Drawing.Point(46, 275)
+        Me.lblTotal.Location = New System.Drawing.Point(46, 285)
         Me.lblTotal.MouseState = MaterialSkin.MouseState.HOVER
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(44, 19)
@@ -103,6 +106,7 @@ Partial Class frmMain
         Me.txtItem1.Depth = 0
         Me.txtItem1.Hint = ""
         Me.txtItem1.Location = New System.Drawing.Point(113, 163)
+        Me.txtItem1.MaxLength = 32767
         Me.txtItem1.MouseState = MaterialSkin.MouseState.HOVER
         Me.txtItem1.Name = "txtItem1"
         Me.txtItem1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -111,6 +115,7 @@ Partial Class frmMain
         Me.txtItem1.SelectionStart = 0
         Me.txtItem1.Size = New System.Drawing.Size(255, 23)
         Me.txtItem1.TabIndex = 0
+        Me.txtItem1.TabStop = False
         Me.txtItem1.UseSystemPasswordChar = False
         '
         'txtItem2
@@ -118,6 +123,7 @@ Partial Class frmMain
         Me.txtItem2.Depth = 0
         Me.txtItem2.Hint = ""
         Me.txtItem2.Location = New System.Drawing.Point(113, 191)
+        Me.txtItem2.MaxLength = 32767
         Me.txtItem2.MouseState = MaterialSkin.MouseState.HOVER
         Me.txtItem2.Name = "txtItem2"
         Me.txtItem2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -126,13 +132,15 @@ Partial Class frmMain
         Me.txtItem2.SelectionStart = 0
         Me.txtItem2.Size = New System.Drawing.Size(255, 23)
         Me.txtItem2.TabIndex = 1
+        Me.txtItem2.TabStop = False
         Me.txtItem2.UseSystemPasswordChar = False
         '
         'txtTotal
         '
         Me.txtTotal.Depth = 0
         Me.txtTotal.Hint = ""
-        Me.txtTotal.Location = New System.Drawing.Point(113, 274)
+        Me.txtTotal.Location = New System.Drawing.Point(113, 284)
+        Me.txtTotal.MaxLength = 32767
         Me.txtTotal.MouseState = MaterialSkin.MouseState.HOVER
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -141,16 +149,21 @@ Partial Class frmMain
         Me.txtTotal.SelectionStart = 0
         Me.txtTotal.Size = New System.Drawing.Size(255, 23)
         Me.txtTotal.TabIndex = 3
+        Me.txtTotal.TabStop = False
         Me.txtTotal.UseSystemPasswordChar = False
         '
         'btnExit
         '
+        Me.btnExit.AutoSize = True
+        Me.btnExit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btnExit.Depth = 0
-        Me.btnExit.Location = New System.Drawing.Point(248, 231)
+        Me.btnExit.Icon = Nothing
+        Me.btnExit.Location = New System.Drawing.Point(318, 231)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.btnExit.MouseState = MaterialSkin.MouseState.HOVER
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Primary = True
-        Me.btnExit.Size = New System.Drawing.Size(120, 23)
+        Me.btnExit.Primary = False
+        Me.btnExit.Size = New System.Drawing.Size(50, 36)
         Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -160,7 +173,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(414, 323)
+        Me.ClientSize = New System.Drawing.Size(414, 338)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.txtItem2)
@@ -172,6 +185,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblItem1)
         Me.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(414, 338)
+        Me.MinimumSize = New System.Drawing.Size(414, 338)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Marcy’s Department Store"
@@ -187,5 +203,5 @@ Partial Class frmMain
     Friend WithEvents txtItem1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txtItem2 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents txtTotal As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents btnExit As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents btnExit As MaterialSkin.Controls.MaterialFlatButton
 End Class
