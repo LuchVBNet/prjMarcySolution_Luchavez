@@ -1,0 +1,14 @@
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\bin\Debug\prjMarcyProject_Luchavez.exe.config
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\bin\Debug\prjMarcyProject_Luchavez.exe
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\bin\Debug\prjMarcyProject_Luchavez.pdb
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\bin\Debug\prjMarcyProject_Luchavez.xml
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\bin\Debug\MaterialSkin.dll
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.vbprojAssemblyReference.cache
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.Resources.resources
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.vbproj.GenerateResource.cache
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.vbproj.CoreCompileInputs.cache
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.vbproj.CopyComplete
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.exe
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.xml
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.pdb
+D:\Visual Studio\Week 4\prjMarcySolution_Luchavez\prjMarcyProject_Luchavez\obj\Debug\prjMarcyProject_Luchavez.frmMain.resources
